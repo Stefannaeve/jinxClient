@@ -45,6 +45,9 @@ void setup(){
 }
 
 void loop(){
-    Serial.println("Loop running...");
+    Serial.println("IP: " + WiFi.localIP());
+    if (WiFi.status() != WL_CONNECTED) {
+        Serial.println("Connection lost pleb");
+    }
     delay(2000);
 }
